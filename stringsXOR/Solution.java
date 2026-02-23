@@ -7,15 +7,15 @@ import java.util.regex.*;
 public class Solution {
 
     public static String stringsXOR(String s, String t) {
-        StringBuilder res = new StringBuilder();
+        String res = new String("");
         for(int i = 0; i < s.length(); i++) {
             if(s.charAt(i) == t.charAt(i))
-                res.append("0");
+                res += "0";
             else
-                res.append("1");
+                res += "1";
         }
 
-        return res.toString();
+        return res;
     }
 
     public static void main(String[] args) {
@@ -25,11 +25,7 @@ public class Solution {
         s = in.nextLine();
         t = in.nextLine();
         System.out.println(stringsXOR(s, t));
-        in.close();
 
     }
 
 }
-
-
-
